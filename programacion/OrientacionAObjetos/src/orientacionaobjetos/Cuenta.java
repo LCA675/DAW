@@ -110,8 +110,8 @@ public class Cuenta {
         return false;
     }
 
-    public boolean reintregro(int gasto) {
-        if (getSaldo() >= gasto && gasto > 0) {
+    public boolean reintegro(int gasto) {
+        if (this.haySaldo() && gasto > 0) {
             this.saldo -= gasto;
             return true;
         }
@@ -119,8 +119,7 @@ public class Cuenta {
     }
 
     public boolean transferencia(Cuenta n_cuentaDestino, int importe) {
-        if (this.saldo >= importe) {
-            this.saldo -= importe;
+        if (this.reintegro(importe)) {
             n_cuentaDestino.ingreso(importe);
             return true;
         }
