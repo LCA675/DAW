@@ -57,23 +57,48 @@ public class Grupo {
             System.out.println(alumnado[i].boletin());
         }
     }
-    
-    public boolean insertarAlumno(){
-        if (n_alumnos<alumnado.length){
-            alumnado[n_alumnos]=new Alumno();
+
+    public boolean insertarAlumno(Alumno alumno) {
+        if (n_alumnos < alumnado.length) {
+            alumnado[n_alumnos] = alumno;
+            n_alumnos++;
             return true;
-        }  
-        return false;
-    }
-    
-    public boolean buscarAlumno(int nombre){
-        for (int i = 0; i < n_alumnos; i++) {
-            if (alumnado[i].equals(nombre)){
-                
-            }
         }
-        
         return false;
     }
 
+    public Alumno buscarAlumno(String nombre) {
+        Alumno alumnoEn = new Alumno();
+        for (int i = 0; i < n_alumnos; i++) {
+            if (alumnado[i].nombre.equals(nombre)) {
+                alumnoEn = alumnado[i];
+                System.out.println(alumnoEn.boletin());
+                return alumnoEn;
+            }
+        }
+        return null;
+    }
+
+    public void evaluar() {
+        for (int i = 0; i < n_alumnos; i++) {
+            alumnado[i].rellenarNotas();
+        }
+    }
+
+    public boolean mediaGrupo() {
+        int media=0, contador=0;
+        for (int i = 0; i < n_alumnos; i++) {
+            if (alumnado[i].notaFinal()!=-1){
+                media+=alumnado[i].notaFinal();
+                contador++;
+            } else {
+                System.out.println("No se puede calcular la media");
+                return false;
+            }
+        }
+        int notafinal=0;
+        notafinal= media/contador;
+        System.out.println("La media del grupo es: "+notafinal);
+        return true;
+    }
 }

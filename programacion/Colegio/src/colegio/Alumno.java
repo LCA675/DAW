@@ -107,5 +107,7 @@ public class Alumno {
         this.nota_trimestre3 = (int) (Math.random() * 10 + 1);
 
     }
+    
+    
 
 }
