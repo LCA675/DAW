@@ -17,7 +17,7 @@ public class Cliente {
     public Cliente(String dni, double salario, Cuenta cuenta) {
         this.dni = dni;
         this.salario = salario;
-        this.cuenta = cuenta;
+        this.cuenta = cuenta();
     }
 
     public Cliente() {

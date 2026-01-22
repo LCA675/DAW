@@ -12,22 +12,19 @@ public class Cuenta {
 
     public String nombre;
     protected String n_cuenta;
-    public double interes;
     protected double saldo;
     protected int contraseña;
 
     public Cuenta() {
         this.nombre = "";
         this.n_cuenta = "";
-        this.interes = 0;
         this.saldo = 0;
         this.contraseña = 0;
     }
 
-    public Cuenta(String nombre, String n_cuenta, double interes, double saldo, int contraseña) {
+    public Cuenta(String nombre, String n_cuenta, double saldo, int contraseña) {
         this.nombre = nombre;
         this.n_cuenta = n_cuenta;
-        this.interes = interes;
         this.saldo = saldo;
         this.contraseña = contraseña;
     }
@@ -35,7 +32,6 @@ public class Cuenta {
     public Cuenta(Cuenta cuentaCopia) {
         this.nombre = cuentaCopia.nombre;
         this.n_cuenta = cuentaCopia.n_cuenta;
-        this.interes = cuentaCopia.interes;
         this.saldo = cuentaCopia.saldo;
         this.contraseña = cuentaCopia.contraseña;
     }
@@ -68,19 +64,7 @@ public class Cuenta {
         this.n_cuenta = n_cuenta;
     }
 
-    /**
-     * @return the interes
-     */
-    public double getInteres() {
-        return interes;
-    }
-
-    /**
-     * @param interes the interes to set
-     */
-    public void setInteres(double interes) {
-        this.interes = interes;
-    }
+    
 
     /**
      * @return the saldo
@@ -107,7 +91,7 @@ public class Cuenta {
     @Override
     public String toString() {
         return "Cuenta{" + "/ln nombre= " + nombre + " /ln n_cuenta= " + n_cuenta
-                + " /lninteres= " + interes + "/ln saldo= " + saldo + '}';
+                + "/ln saldo= " + saldo + '}';
     }
 
     public boolean haySaldo() {
