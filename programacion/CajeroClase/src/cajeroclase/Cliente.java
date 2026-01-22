@@ -13,11 +13,13 @@ public class Cliente {
     public String dni;
     public double salario;
     public Cuenta cuenta;
+    
 
-    public Cliente(String dni, double salario, Cuenta cuenta) {
+    public Cliente(String dni, double salario, int saldo) {
         this.dni = dni;
         this.salario = salario;
-        this.cuenta = cuenta();
+        int dni2= Integer.parseInt(dni);
+        this.cuenta = new Cuenta(dni,saldo,dni2);
     }
 
     public Cliente() {

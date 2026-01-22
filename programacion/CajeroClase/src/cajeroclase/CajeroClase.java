@@ -17,7 +17,7 @@ public class CajeroClase {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        Cliente cliente1 = new Cliente("123456789E", 1100, new Cuenta("Pepe", "1234567", 0.4, 10000, 123456789));
+        Cliente cliente1 = new Cliente("123456789E", 1100, 10000);
         
         int opcion = -1;
         while (opcion != 0) {

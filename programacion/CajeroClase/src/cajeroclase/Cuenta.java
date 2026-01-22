@@ -10,45 +10,29 @@ package cajeroclase;
  */
 public class Cuenta {
 
-    public String nombre;
     protected String n_cuenta;
     protected double saldo;
     protected int contraseña;
 
     public Cuenta() {
-        this.nombre = "";
         this.n_cuenta = "";
         this.saldo = 0;
         this.contraseña = 0;
     }
 
-    public Cuenta(String nombre, String n_cuenta, double saldo, int contraseña) {
-        this.nombre = nombre;
+    public Cuenta( String n_cuenta, double saldo, int contraseña) {
         this.n_cuenta = n_cuenta;
         this.saldo = saldo;
         this.contraseña = contraseña;
     }
 
     public Cuenta(Cuenta cuentaCopia) {
-        this.nombre = cuentaCopia.nombre;
         this.n_cuenta = cuentaCopia.n_cuenta;
         this.saldo = cuentaCopia.saldo;
         this.contraseña = cuentaCopia.contraseña;
     }
 
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    
 
     /**
      * @return the n_cuenta
@@ -90,7 +74,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "/ln nombre= " + nombre + " /ln n_cuenta= " + n_cuenta
+        return "Cuenta{" + " /ln n_cuenta= " + n_cuenta
                 + "/ln saldo= " + saldo + '}';
     }
 
