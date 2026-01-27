@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Formularuio de matrícula</h1>
+    </header>
+
+    <p>Por favor, rellena los datos para inscribirte en uno de los Ciclos Formativos de Grado Superior de Informática</p>
+
+    <form>
+        <label for="nombre" id="nombre">Nombre Completo:</label> <br>
+        <input type="text" placeholder="Escribe tu nombre" id="nombre"> <br><br>
+
+        <label for="DNI" id="DNI">DNI:</label> <br>
+        <input type="text" placeholder="Ejemplo: 12345678A" id="DNI"> <br><br>
+
+        <label for="fechaNac" id="fechaNac">Fecha de nacimiento: </label> <br>
+        <input type="date" name="fechaNac" id="fechaNac"> <br><br>
+
+        <label for="ciclo" id="ciclo">Selecciona el ciclo que deseas incribirte: </label><br><br>
+        <select name="ciclo" id="ciclo" >
+            <option value="" disabled selected hidden>Selecciona una opción</option>
+            <option value="DAW">DAW</option>
+            <option value="DAM">DAM</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Enviar matrícula</button>
+
+    </form>
+
+
+</body>
+</html>
