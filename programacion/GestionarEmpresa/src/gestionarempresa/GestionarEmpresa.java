@@ -51,7 +51,7 @@ public class GestionarEmpresa {
                     String dni = Entrada.leerCadena("Introduzca el DNI del empleado");
                     double salario = Entrada.leerDouble("Introduzca el salario del empleado");
                     Empleados empleado = new Empleados(nombre, dni, salario);
-                    };
+                    
                     empresa1.contratar(empleado);
 
             }
