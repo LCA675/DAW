@@ -20,7 +20,7 @@ public class Empresa {
         this.nombreEmpresa = nombreEmpresa;
         this.cif = cif;
         this.numeroEmpleados = 0;
-        this.empleados = new Empleados[numeroEmpleados];
+        this.empleados = new Empleados[20];
         this.cuentaEmpresa = new Cuenta(nombreEmpresa, cif, 10, saldo);
     }
 
@@ -67,7 +67,7 @@ public class Empresa {
     public boolean contratar(Empleados empleado) {
         if (numeroEmpleados < empleados.length) {
             empleados[numeroEmpleados] = empleado;
-            numeroEmpleados++;
+            this.numeroEmpleados++;
             return true;
         }
         return false;
@@ -97,6 +97,7 @@ public class Empresa {
             }
         }
     }
+    
     
     
     public void datosEmpresa(){

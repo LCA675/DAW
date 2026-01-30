@@ -94,8 +94,8 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "/ln nombre= " + nombre + " /ln n_cuenta= " + n_cuenta
-                + " /lninteres= " + interes + "/ln saldo= " + saldo + '}';
+        return "Cuenta: " + "  nombre= " + this.nombre + " , numero de cuenta= " + this.n_cuenta
+                + " , interes = " + this.interes + " , saldo= " + this.saldo;
     }
 
     public boolean haySaldo() {
